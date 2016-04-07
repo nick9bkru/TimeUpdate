@@ -1,0 +1,151 @@
+<ui version="4.0" >
+ <class>ResFrame</class>
+ <widget class="QFrame" name="ResFrame" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>499</width>
+    <height>177</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Frame</string>
+  </property>
+  <property name="frameShape" >
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow" >
+   <enum>QFrame::Raised</enum>
+  </property>
+  <widget class="QPushButton" name="RmishButton" >
+   <property name="geometry" >
+    <rect>
+     <x>168</x>
+     <y>118</y>
+     <width>153</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>РМИШ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Rmdi2Button" >
+   <property name="geometry" >
+    <rect>
+     <x>168</x>
+     <y>66</y>
+     <width>153</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>РМДИ 2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Rmdi1Button" >
+   <property name="geometry" >
+    <rect>
+     <x>168</x>
+     <y>14</y>
+     <width>153</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>РМДИ 1</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame" >
+   <property name="geometry" >
+    <rect>
+     <x>6</x>
+     <y>10</y>
+     <width>151</width>
+     <height>157</height>
+    </rect>
+   </property>
+   <property name="frameShape" >
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow" >
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="CUU2Button" >
+    <property name="geometry" >
+     <rect>
+      <x>6</x>
+      <y>84</y>
+      <width>139</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>ЦУУ 2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CUU1Button" >
+    <property name="geometry" >
+     <rect>
+      <x>6</x>
+      <y>10</y>
+      <width>139</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>ЦУУ 1</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_4" >
+   <property name="geometry" >
+    <rect>
+     <x>336</x>
+     <y>8</y>
+     <width>155</width>
+     <height>157</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" >
+    <property name="margin" >
+     <number>0</number>
+    </property>
+    <property name="spacing" >
+     <number>7</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="Rmo1Button" >
+      <property name="text" >
+       <string>РМО 1</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Rmo2Button" >
+      <property name="text" >
+       <string>РМО 2</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Rmo3Button" >
+      <property name="text" >
+       <string>РМО3</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Rmo4Button" >
+      <property name="text" >
+       <string>РМО 4</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
