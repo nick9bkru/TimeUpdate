@@ -5,8 +5,8 @@
 
 void insIp()
 {
-    Util::Singleton<ServersIp>::getInstance().insert("192.168.1.101", "ЦУУ");
-    Util::Singleton<ServersIp>::getInstance().insert("192.168.1.102", "ЦУУ1");
+    Util::Singleton<ServersIp>::getInstance().insert("192.168.1.101", "ЦУУ1");
+    Util::Singleton<ServersIp>::getInstance().insert("192.168.1.102", "ЦУУ2");
     Util::Singleton<ServersIp>::getInstance().insert("192.168.1.2", "РМО1");
     Util::Singleton<ServersIp>::getInstance().insert("192.168.1.3", "РМО2");
     Util::Singleton<ServersIp>::getInstance().insert("192.168.1.4", "РМО3");
