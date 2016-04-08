@@ -43,7 +43,7 @@ QString UdpServ::getIp()
    QList<QHostAddress> listAddr= QNetworkInterface::allAddresses();
   for ( QList<QHostAddress>::iterator it = listAddr.begin() ; it != listAddr.end(); it++ )
   {
-     if ( (*it).toString().contains("192.168.1."))
+     if ( (*it).toString().contains("192.168.1.") && ((*it).toString() != "192.168.1.1") )
      {
           qDebug()<<" CommandSender::getIp() my ip == " << (*it).toString();
         return (*it).toString();
