@@ -17,6 +17,7 @@ UdpServ::UdpServ(const QString ip, const int port ) :lastPort(0)
 UdpServ::~UdpServ()
 {
  sock->close();
+ delete sock;
 };
 
 bool UdpServ::sendMes(const QByteArray  & mess )

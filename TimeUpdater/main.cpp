@@ -2,7 +2,10 @@
 #include <QApplication>
 #include "Singleton.h"
 #include "ServersIp.h"
-
+/**
+ * @brief insIp
+ * устанавливаем все пары рабочих мест и IP дресов
+ */
 void insIp()
 {
     Util::Singleton<ServersIp>::getInstance().insert("192.168.1.101", "ЦУУ1");

@@ -9,6 +9,11 @@ ServManage::ServManage(const QString ip, const int port )
     connect( serv, SIGNAL ( RecvCommand() ), this,  SLOT( recievCom () ));
 }
 
+ServManage::~ServManage()
+{
+     delete serv;
+};
+
 void ServManage::recievCom ()
 {
     qDebug() << "ServManage::recievCom ()";
