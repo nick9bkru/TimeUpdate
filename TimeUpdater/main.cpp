@@ -2,6 +2,7 @@
 #include <QApplication>
 #include "Singleton.h"
 #include "ServersIp.h"
+#include "OneCopyStart.h"
 /**
  * @brief insIp
  * устанавливаем все пары рабочих мест и IP дресов
@@ -23,6 +24,12 @@ void insIp()
 int main(int argc, char *argv[])
 {
 
+    OneCopyStart onecopy("Time Updater");
+    if ( onecopy.isRun() )
+    {
+        qDebug() << "One copy already start !!!!!!!!!!";
+        return -1;
+    }
     insIp();
     QApplication a(argc, argv);
     MainWidjet w;
