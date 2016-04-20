@@ -1,1 +1,3 @@
 *.zip
+/build-TimeUpdater-Desktop-Debug/
+/build-TimeUpdateServ-Desktop-Debug/

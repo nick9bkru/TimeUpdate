@@ -17,14 +17,16 @@ SOURCES += main.cpp\
     TimeDateEdit.cpp \
     UdpClient.cpp \
     ServersIp.cpp \
-    ResFrame.cpp
+    ResFrame.cpp \
+    OneCopyStart.cpp
 
 HEADERS  += MainWidjet.h \
     TimeDateEdit.h \
     UdpClient.h \
     ServersIp.h \
     Singleton.h \
-    ResFrame.h
+    ResFrame.h \
+    OneCopyStart.h
 
 FORMS    += MainWidjet.ui \
     TimeDateEdit.ui \
