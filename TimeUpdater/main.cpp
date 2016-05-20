@@ -1,8 +1,14 @@
+#define QT42
+
 #include "MainWidjet.h"
 #include <QApplication>
 #include "Singleton.h"
 #include "ServersIp.h"
-#include "OneCopyStart.h"
+#ifndef QT42
+#include "include/OneCopyStart.h"
+#else
+#include "include/qtsingleapplication.h"
+#endif
 /**
  * @brief insIp
  * устанавливаем все пары рабочих мест и IP дресов
@@ -23,15 +29,24 @@ void insIp()
 
 int main(int argc, char *argv[])
 {
-
+#ifndef QT42
     OneCopyStart onecopy("Time Updater");
     if ( onecopy.isRun() )
     {
         qDebug() << "One copy already start !!!!!!!!!!";
         return -1;
-    }
-    insIp();
+    };
     QApplication a(argc, argv);
+#else
+    QtSingleApplication a(argc, argv);
+    if ( a.sendMessage("Wake up!") )
+    {
+        qDebug() << "One copy already start !!!!!!!!!!";
+        return -1;
+    };
+#endif
+    insIp();
+
     MainWidjet w;
     w.show();
 

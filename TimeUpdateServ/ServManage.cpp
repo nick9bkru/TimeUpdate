@@ -4,7 +4,7 @@
 
 ServManage::ServManage(const QString ip, const int port )
 {
-    qDebug() << "ServManage::ServManage";
+    qDebug() << "ServManage::ServManage ip = " << ip << " port = " << port ;
     serv = new UdpServ ( ip, port );
     connect( serv, SIGNAL ( RecvCommand() ), this,  SLOT( recievCom () ));
 }

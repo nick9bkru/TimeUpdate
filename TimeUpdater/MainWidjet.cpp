@@ -9,6 +9,7 @@ MainWidjet::MainWidjet(QWidget *parent) :
 {
     qDebug ()<< "MainWidjet::MainWidjet";
     setupUi( this );
+    move ( 1600 , 0);
     TimeEdit = new TimeDateEdit (TimeEditWidget );
     connect( SetTimeButton, SIGNAL ( clicked() ), this, SLOT( setTimeSlot() ) );
     udpSender = new UdpClient ( UdpClient::getIp(), PORT );
@@ -32,7 +33,7 @@ void MainWidjet::setTimeSlot()
      QMap <QString , QString> *serv = Util::Singleton<ServersIp>::getInstance().getMap();
      for ( QMap <QString , QString> ::iterator it = serv->begin(); it != serv->end(); it++ )
      {
-         udpSender->sendMes( it.key(), PORT, buf);
+         udpSender->sendMes( it.key(), PORT+1, buf);
      }
     }
     catch( const QString & str )

@@ -12,6 +12,6 @@ int main(int argc, char *argv[])
 
     QCoreApplication a( argc, argv);
     qDebug() << "Start";
-    ServManage serv ( /*UdpServ::getIp()*/ "192.168.1.199", 30000 );
+    ServManage serv ( UdpServ::getIp(), 30001 );
     return a.exec();
 }
