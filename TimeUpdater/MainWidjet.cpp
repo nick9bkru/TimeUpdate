@@ -16,6 +16,7 @@ MainWidjet::MainWidjet(QWidget *parent) :
     Result = new ResFrame ( this->ResWidget );
     connect( udpSender, SIGNAL( RecvCommand ( const UdpClient::dataRecieve & ) ), Result , SLOT ( SetRes( const UdpClient::dataRecieve & ) ) );
     connect( QuitButton, SIGNAL ( clicked() ), this, SLOT(close() )) ;
+    this->setWindowFlags(Qt::WindowStaysOnTopHint);
 }
 
 MainWidjet::~MainWidjet()
