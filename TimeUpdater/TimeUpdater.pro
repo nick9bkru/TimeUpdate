@@ -11,10 +11,6 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = TimeUpdater
 TEMPLATE = app
 
-lessThan ( QT_VERSION, 4.4 ) {
-  DEFINES += QT42
-  message("QT Version < " $$QT_PATCH_VERSION )
-}
 
 SOURCES += main.cpp\
         MainWidjet.cpp \
@@ -35,12 +31,16 @@ FORMS    += MainWidjet.ui \
     TimeDateEdit.ui \
     ResFrame.ui
 
-unix:!macx: LIBS += -L$$OUT_PWD/../SingleAppLib/ -lSingleApplication
+greaterThan ( QT_VERSION, 4.4 ) {
+    DEFINES += QT44
+    message( "!!!!!!!!!!!!!!!!!!!"$$DEFINES)
+    unix:!macx: LIBS += -L$$OUT_PWD/../SingleAppLib/ -lSingleApplication
 
-unix:{
-  QMAKE_RPATHDIR +=$$OUT_PWD/../SingleAppLib/
- #QMAKE_LFLAGS += -Wl,--rpath=$$OUT_PWD/../SingleAppLib/
+    unix:{
+        QMAKE_RPATHDIR +=$$OUT_PWD/../SingleAppLib/
+        #QMAKE_LFLAGS += -Wl,--rpath=$$OUT_PWD/../SingleAppLib/
+    }
+
+    INCLUDEPATH += $$PWD/../SingleAppLib
+    DEPENDPATH += $$PWD/../SingleAppLib
 }
-
-INCLUDEPATH += $$PWD/../SingleAppLib
-DEPENDPATH += $$PWD/../SingleAppLib

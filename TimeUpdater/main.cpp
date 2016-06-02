@@ -1,13 +1,10 @@
-#define QT42
 
 #include "MainWidjet.h"
 #include <QApplication>
 #include "Singleton.h"
 #include "ServersIp.h"
-#ifndef QT42
+#ifdef QT44
 #include "include/OneCopyStart.h"
-#else
-#include "include/qtsingleapplication.h"
 #endif
 /**
  * @brief insIp
@@ -29,7 +26,7 @@ void insIp()
 
 int main(int argc, char *argv[])
 {
-#ifndef QT42
+#ifdef QT44
     OneCopyStart onecopy("Time Updater");
     if ( onecopy.isRun() )
     {
@@ -37,13 +34,6 @@ int main(int argc, char *argv[])
         return -1;
     };
     QApplication a(argc, argv);
-#else
-    QtSingleApplication a(argc, argv);
-    if ( a.sendMessage("Wake up!") )
-    {
-        qDebug() << "One copy already start !!!!!!!!!!";
-        return -1;
-    };
 #endif
     insIp();
 
